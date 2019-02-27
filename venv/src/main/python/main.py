@@ -195,8 +195,8 @@ def on_balance_click(deck):
 
 def set_file_name():
     if getattr(sys, 'frozen', False):
-        filename = pathlib.Path(sys.executable).resolve().parents[1]
-        filename = filename.joinpath('resources/base/cyphers.pk1')
+        filename = pathlib.Path(sys.executable).resolve().parents[0]
+        filename = filename.joinpath('cyphers.pk1')
     else:
         filename = pathlib.Path(__file__).resolve().parents[1]
         filename = filename.joinpath('resources/base/cyphers.pk1')
